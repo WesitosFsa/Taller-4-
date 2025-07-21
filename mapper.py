@@ -12,7 +12,7 @@ with open(filename, 'r') as f:
         try:
             # Ejemplo de línea: 2025-07-20 07:15:02 usuario:ana
             timestamp_str, user_str = line.strip().split(" usuario:")
-            timestamp = datetime.strptime(timestamp_str, "%Y-%m-%d %H:%M:%S")
+            timestamp = datetime.datetime.strptime(timestamp_str, "%Y-%m-%d %H:%M:%S")
             hour = timestamp.hour
 
             if hour < inicio or hour >= fin:
